@@ -8,8 +8,10 @@ m = length(y); % number of training examples
 J_history = zeros(num_iters, 1);
 
 for iter = 1:num_iters
-
-    % ====================== YOUR CODE HERE ======================
+    j = transpose(X*theta-y)
+    theta(1) = theta(1) - alpha*j*X(:,1)/m
+    theta(2) = theta(2) - alpha*j*X(:,2)/m
+  % ====================== YOUR CODE HERE ======================
     % Instructions: Perform a single gradient step on the parameter vector
     %               theta. 
     %
